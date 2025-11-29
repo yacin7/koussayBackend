@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: [
     'http://localhost:8080',
+    'http://localhost:8081',
     'https://koussaybackend.onrender.com'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],

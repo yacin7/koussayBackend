@@ -13,6 +13,7 @@ app.use(cors({
     'http://localhost:8080',
     'http://localhost:8081',
     'https://morethanbite.onrender.com',
+    'https://more-thanbite.onrender.com',
     'https://koussaybackend.onrender.com'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],

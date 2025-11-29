@@ -10,11 +10,13 @@ const PORT = process.env.PORT || 5000;
 // Middleware CORS
 app.use(cors({
   origin: [
-    'https://koussaybackend.onrender.com', // <-- ton lien autorisé
+    'http://localhost:8080',
+    'https://koussaybackend.onrender.com'
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
+
 
 app.use(bodyParser.json());
 

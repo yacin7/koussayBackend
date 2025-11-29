@@ -7,11 +7,18 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
+// Middleware CORS
+app.use(cors({
+  origin: [
+    'https://koussaybackend.onrender.com', // <-- ton lien autorisé
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 app.use(bodyParser.json());
 
-// Connexion MongoDB – version propre 2025
+// Connexion MongoDB
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('Connecté à MongoDB'))
   .catch(err => console.error('Erreur MongoDB:', err));

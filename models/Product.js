@@ -31,10 +31,8 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,                    // ← C’est ce qui manquait !
       enum: [
-        "christmas",
+        "Cookies",
         "mini-cookies",
-        "same-day",
-        "gift-sets",
         "brownies"
       ],
     },
